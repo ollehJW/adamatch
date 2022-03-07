@@ -1,0 +1,43 @@
+{
+    "controls":{
+        "channel_name": "CPsignal1",
+        "source_data_dir":"/nas001/users/mg.choi/work/sound.ai/sound.ai.machine/qbank_comp/repro_tdms/train_9class/",
+        "target_data_dir":"/nas001/users/mg.choi/work/sound.ai/sound.ai.machine/qbank_comp/repro_tdms/train_9class_kr3-gmesok2-ss",
+        "remove_filename_list" : ["20201006130955_K410MC19E_FMA088NBMA_063360100J022K008102.tdms",
+                                "20200714162846_B608S_FMA102NBMA_1162700225511T011102.tdms",
+                                "20200714113014_B608S_FMA102NBMA_1162700225511T011102.tdms",
+                                "20200714133306_B608S_FMA102NBMA_1162700225511T011102.tdms"],
+        "experiment_path":"./refri/202201",
+        "model_path": "/nas001/users/mg.choi/work/sound.ai/sound.ai.machine/models/slice/refri_mobilenet_9class_model_v0.1.h5",
+        "batch_size": 2,
+        "early_stopping_patience": 20
+    },
+    "parameters":{
+        "epochs" : 10,
+        "dropout_rate": 0.2,
+        "backbone_name" : "mobilenetv1",
+        "display_metric": ["acc", "ce"],
+        "eval_metric": "val_acc",
+        "validation_split":0.2,
+        "mixup_alpha":1,
+        "mixup_beta":1,
+        "sr":25000,
+        "time_size":2,
+        "optimizer_name" : "Adam",
+        "optimizer_learning_rate": 1e-4,
+        "optimizer_nesterov" : null,
+        "optimizer_weight_decay" : 1e-8,
+        "optimizer_rho" : 0.9,
+        "optimizer_momentum" : 0.0,
+        "optimizer_epsilon" : 1e-07,
+        "optimizer_centered" : false,
+        "optimizer_beta_1" : 0.9,
+        "optimizer_beta_2" : 0.999,
+        "optimizer_amsgrad" : false,
+        "early_stopping_min_delta" : 0,
+        "lr_scheduler_name":"constant",
+        "model_pretrained" : "imagenet",
+        "class_mode" : "categorical",
+        "loss_name":"categorical_crossentropy"
+    }
+}
