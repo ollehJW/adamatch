@@ -18,8 +18,8 @@ with open(config, 'r') as cfg:
     control_config = config['controls']
     parameter_config = config['parameters']
 
-IMG_HEIGHT = 224
-IMG_WIDTH = 224
+IMG_HEIGHT = 32
+IMG_WIDTH = 32
 SR = parameter_config['sr']
 TIME_SIZE = parameter_config['time_size']
 MIXUP_ALPHA = parameter_config['mixup_alpha']
